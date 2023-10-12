@@ -1,0 +1,165 @@
+//bosquejo
+//entrada: definimos las variables:
+//num1=0?(leer), num2=0?(leer), 
+//suma=0?(resolver)
+//proceso: suma<-num1+num2
+//salida: escribir "la suma es", suma;
+Funcion ejercicio11
+	Definir num1, num2, suma Como Entero
+	num1<-0;
+	num2<-0;
+	Escribir "Ingrese El Primer Número";
+	Leer num1;
+	Escribir "Ingrese El Segundo Número";
+	Leer num2;
+	suma<-num1+num2;
+	
+	Escribir "La suma es ", suma; 
+FinFuncion
+
+//Número par o impar: Solicita al usuario que ingrese un número e indica si es par o impar.
+//bosquejo
+//entrada: num1=0?(leer)
+//proceso: si num1%2=0: "El Número es par"
+//sino 
+//Escribir "El Numero es impar"
+//finsi
+//salida: mostrara si es par o impar
+Funcion ejercicio13
+	definir num1 Como Entero
+	Escribir "Ingrese el numero"
+	Leer num1
+	Si num1%2=0 Entonces
+		Escribir "El número es par"
+	SiNo
+		Escribir "El número es impar"
+	Fin Si
+FinFuncion
+
+
+//Área de un triángulo: Pide al usuario que ingrese la base y la altura de un triángulo,
+//luego calcula y muestra su área.
+//bosquejo
+//entrada: ba<-0?(Leer), al<-0?(leer),area<-0?(calculada)
+//proceso: area=ba*altura/2
+//salida: Mostrar "el área es: ",área;
+Funcion ejercicio12
+	Definir ba, al, área Como Real
+	ba<-0;
+	al<-0;
+	Escribir "Ingrese la Base del Triangulo"
+	Leer ba;
+	Escribir "Ingrese la Altura del Triangulo"
+	Leer al;
+	área<-ba*al/2;
+	Escribir "El área es " área;
+FinFuncion
+
+
+//Calculadora simple: Crea una calculadora que realice operaciones básicas
+//como suma,resta, multiplicación y división, según la elección del usuario.
+//bosquejo:
+//entrada: num1(leer)=0?,num2=0?(leer),operacion=''?(leer),res=0?(calculada)
+//pro: si operacion="+"
+// res=num1+num2:
+// si operacion="-"
+//res=num1-num2
+// si operacion="*"
+//es=num1*num2
+// si operacion="/"
+//res=num1/num2
+//SiNo
+// escribir "Operacion invalida"
+// salida: res
+Funcion ejercicio14
+	Definir num1, num2, res Como Real
+	definir operacion Como Caracter
+	num1<-0; num2<-0; res<-0;
+	operacion<-""
+	Escribir "Ingrese  Operación a realizar (+, -, *, /):"
+	Leer operacion
+	escribir "Ingrese numero1: "
+	leer num1;
+	Escribir "Ingrese número2: "
+	Leer num2;
+	Si operacion="+" Entonces
+		res=num1+num2
+		Escribir num1, "+", num2,"=", res
+	SiNo
+		Si operacion="-" Entonces
+			res=num1-num2
+			Escribir num1, "-", num2,"=", res
+		SiNo
+			Si operacion="*" Entonces
+				res=num1*num2
+				Escribir num1, "*", num2,"=", res
+			SiNo
+				Si operacion="/" Entonces
+					res=num1/num2
+					Escribir num1, "/", num2,"=", res
+				SiNo
+					Escribir "Operacion invalida ingrese operador"
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	Escribir res;
+FinFuncion
+
+
+//Tabla de multiplicar: Pide al usuario un número 
+//y muestra su tabla de multiplicar del 1 al 10.
+//bosquejo:
+// ent:tabla=0?(leer)
+//proceso:Escribir  tabla "*" , "1", "=", tabla*1: tabla*2: tabla*3: tabla*4: tabla*5
+//tabla*6: tabla*7: tabla*8: tabla*9: tabla*10
+//salida: saldara la tabla de multiplicar
+Funcion ejercicio15
+	Definir tabla Como Entero
+	Escribir "Tabla de Multiplicar"
+	Leer tabla
+	Escribir  tabla "*" , "1", "=", tabla*1
+	escribir tabla "*" , "2", "=", tabla*2
+	Escribir  tabla "*" , "3", "=", tabla*3
+	Escribir  tabla "*" , "4", "=", tabla*4
+	Escribir  tabla "*" , "5", "=", tabla*5
+	Escribir  tabla "*" , "6", "=", tabla*6
+	Escribir  tabla "*" , "7", "=", tabla*7
+	Escribir  tabla "*" , "8", "=", tabla*8
+	Escribir  tabla "*" , "9", "=", tabla*9
+	Escribir  tabla "*" , "10", "=", tabla*10
+FinFuncion
+
+
+// Copiar palabra: Escribe un programa que lea dos palabras y concatena en otra
+// variable las dos palabras y luego muestre la nueva palabra
+//bosquejo del problema	
+// entrada: datos del problema: variables: 
+// palabra1=""?(leida) palabra2=""?(leida)
+// palabraNueva=""?(calculada)
+// proceso: calculos con esos datos: palabraNueva=palabra1+palabra2
+// salida: El resultado a mostrar de esos datos: palabraNueva
+Funcion ejercicio16
+	//entrada de datos
+	Definir palabra1, palabra2, palabraNueva Como Caracter
+	palabra1=""; palabra2=""; palabraNueva="";
+	Escribir "Ingrese la frase1"
+	Leer palabra1;
+	Escribir "Ingrese la frase2"
+	Leer palabra2;
+	//proceso de datos
+	palabraNueva<-palabra1+ " " +palabra2;
+	//salida
+	Escribir palabraNueva
+FinFuncion
+
+
+Algoritmo sin_titulo
+	//ejercicio11()
+	//ejercicio12()
+    //ejercicio13()
+	//ejercicio14()
+	//ejercicio15()
+	//ejercicio16()
+	
+FinAlgoritmo

@@ -1,0 +1,619 @@
+//Mayor de tres números: Solicita tres números y determina cuál es el mayor de ellos.
+//bosquejo
+//ent: num1=0?(leer), num2=0?(leer),num3=0?(leer)
+//pro: si (num1 > num2 y num1>numb3): "El Primer Número es el mayor"
+//    sino 
+//    	  si (num2> num1y num2>num3):"El Segundo Número es el mayor"
+//  	  sino 
+//   		  si (num3 > num1 y num3>num2): "El Primer Número es el mayor"
+//   		 sino 
+//    			escribir "Los numero son iguales"
+//      	   FinSi
+//			FinSi
+//     Finsi
+//salida: saldra cual es numero mayor
+funcion ejercicio17
+	Definir num1, num2, num3 Como Entero
+	Escribir "Ingrese el primer número"
+	leer num1;
+	Escribir "Ingrese el segundo número"
+	Leer num2;
+	Escribir "Ingrese el tercer número"
+	leer num3;
+	si (num1 > num2 y num1 >num3) Entonces
+		escribir "El primer número es el mayor"
+	sino 
+		si (num2 > num1 y num2 > num3) Entonces
+			Escribir "El segundo número es el mayor"
+		SiNo
+			si (num3 > num1 y num3 > num2) Entonces
+				Escribir "El tercer Número es el mayor"
+			SiNo
+				Escribir "Los números son Iguales"
+			FinSi
+			
+		FinSi
+	FinSi
+FinFuncion 
+
+
+//Edad mínima para votar: Pregunta la edad del usuario y verifica si es elegible para votar (18 años o más).
+//bosquejo:
+//ent: pedimos al usuario que ingrese su edad 
+//definimos edad=0?(leer)
+
+//Pro: si edad  >=18: "Ustedes debe para votar en las elecciones"
+// 		SiNo
+//			Escribir "Ustedes no podras votar en las elecciones"
+//      finsi 
+//salida FinFuncion
+Funcion ejercicio18
+	Definir edad Como Entero
+	Escribir "Ingrese Su Edad"
+	Leer edad;
+	si edad >= 18 Entonces
+		Escribir "Usted debe para votar en las elecciones"
+	SiNo
+		Escribir "Usted no podra votar en las elecciones"
+	FinSi
+FinFuncion
+
+// Calculadora de BMI: Crea un programa que calcule el índice de masa corporal (BMI) 
+//partir del peso y la altura del usuario, 
+//y luego indique si está en una categoría de peso saludable.
+// bosquejo: 
+// entr: peso=0?(leer), estarura=0?(leer), bmi=0?(resultado) 
+// masa=""? 
+// pro: bmi = peso (estatura*estatura)
+//bmi <=18.4: masa= "Bajar de peso"
+//bmi >= 18.5 y bmi <=24.9: masa = "peso normal"
+//bmi >= 25 y bmi <= 29.9:  masa = "sobrepeso"
+//bmi >=30 Entonces: masa = "obesidad"
+// sali: escribir "Tu indice de masa corporal es ", bmi, " tienes ", masa;
+Funcion ejercicio19
+	Definir peso, estatura, bmi Como Real
+	Definir masa Como Caracter
+	Escribir "Ingrese su peso en Kilogramos"
+	Leer peso;
+	Escribir "Ingrese su estatura en metros"
+	Leer estatura;
+	bmi<-peso/(estatura*estatura)
+	si bmi <=18.5 Entonces
+		masa ="Bajar de peso"
+	SiNo
+		si bmi >= 18.5 y bmi<=24.9 Entonces
+			masa ="Peso Normal"
+		SiNo
+			si bmi >=25 y bmi<=29.9 Entonces
+				masa= "Sobrepeso"
+			SiNo
+				si bmi >= 30 Entonces
+					masa = "obesidad"
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+	Escribir "Tu indice de masa corporal es ", bmi, " tienes ", masa;
+FinFuncion
+
+
+//Número positivo, negativo o cero: 
+//Pide al usuario que ingrese un número y muestra si es positivo, negativo o cero.
+//bosquejo:
+//ent: num=0?(leer)?
+//num>0: respuesta = " positivo"
+//num<0: respuesta =" negativo"
+//	  respuesta = "cero"
+//salida: Escribir "El Numero ", num , "es" respuesta;
+Funcion ejercicio20
+	definir num Como Real
+	Definir respuesta Como Caracter
+	escribir "Ingrese un numero"
+	Leer num
+	si num>0 Entonces
+		respuesta = " Positivo"
+	SiNo
+		si num<0 Entonces
+			respuesta= " Negativo"
+		SiNo
+			respuesta = " cero"
+		FinSi
+	FinSi
+	Escribir "El número  " num, " es" respuesta;
+FinFuncion
+
+//Año bisiesto: Solicita al usuario un año y determina si es un año bisiesto o no. 
+//Un año bisiesto es divisible por 4, pero no por 100, a menos que también sea divisible por 400.
+//bosquejo:
+//entra: año=0?(leer) 
+// pro: si año mod 4 =0 Entonces
+//		    si año mod 100=0 Entonces
+//		       si año mod 400=0 Entonces
+//			   Escribir "El año", año, " es bisiesto"
+//			   sino 
+//			   Escribir "el año ", año, " no bisiesto"
+//			   FinSi
+//			SiNo
+//			Escribir "El año ", año, "es bisiesto"
+//			finsi 
+//		SiNo
+//		Escribir "El año ", año, "no bisiesto
+//		FinSi
+Funcion ejercicio21
+	Definir año Como Entero
+	Escribir "Ingrese el año";
+	Leer año
+	si año mod 4==0 Entonces
+		si año mod 100==0 Entonces
+			si año mod 400==0 Entonces
+				Escribir "El año ", año, " es bisiesto"
+			SiNo
+				Escribir "El año ", año, " no es bisiesto"
+			FinSi
+		SiNo
+			Escribir "El año ", año, " es bisiesto"
+		FinSi
+	SiNo
+		Escribir "El año ", año " no bisiesto"
+	FinSi
+FinFuncion
+
+//Signo zodiacal: Pide al usuario que ingrese su mes y día de nacimiento, luego determina su signo zodiacal. 
+//Puedes usar una serie de declaraciones if 
+//para comparar las fechas ingresadas con las fechas límite de cada signo zodiacal.
+//entrada: mes=0?(leer), dia=0?(leer),c=0? como entero
+// y definimos signo como caracter
+//proc:(mes = 12 y (dia >= 22 y dia <= 31) o (mes = 1 y dia <= 19)): signo = "Capricornio",	c=1
+//(mes = 1 y (dia >= 20 y dia <=31) o (mes = 2 y dia <= 18)): signo = "Acuario", c=1
+//(mes = 2 y (dia >= 9 y  dia <= 29) o (mes = 3 y dia <= 20)): signo = "Piscis", c=1	
+//(mes = 3 y (dia >= 21 y dia <=31 ) o (mes = 4 y dia <= 19)): signo = "Aries", c=1
+//(mes = 4 y (dia >= 20 y dia <= 30) o  (mes = 5 y dia <= 20)):	signo = "Tauro",c=1
+//(mes = 5 y (dia >= 21 y dia <=31 ) o (mes = 6 y dia <= 20)): signo = "Géminis", c =1
+//(mes = 6 y (dia >= 21 y dia <=30 ) o (mes = 7 y dia <= 22)): signo = "Cáncer", c=1
+//(mes = 7 y (dia >= 23 y dia <=31 ) o (mes = 8 y dia <= 22)): signo = "Leo", c=1
+//(mes = 8 y (dia >= 23 y dia <=31 ) o (mes = 9 y dia <= 22)): signo = "Virgo", c=1
+//(mes = 9 y (dia >= 23 y dia <=30 ) o (mes = 10 y dia <= 22)): signo = "Libra", c=1
+//(mes = 10 y (dia >= 23 y dia <=31 ) o (mes = 11 y dia <= 21)):signo = "Escorpio", c=1
+//(mes = 11 y (dia >= 22 y dia <=30 ) o (mes = 12 y dia <= 21)):signo = "Sagitario", c =1
+// salida: c = 1:
+//	Escribir "Tu signo del zodiaco es: ", signo
+//sino
+//	Escribir "El signo del zodiaco no exite"
+//FinSi
+//FinFuncion
+Funcion ejercicio22
+	definir mes, dia, c Como Entero
+	Definir signo Como Caracter
+	Escribir "Ingrese su mes de nacimiento"
+	Leer mes
+	Escribir "Ingrese su dia de nacimiento"
+	Leer dia
+	c<-0
+	si (mes = 12 y (dia >= 22 y dia <= 31) o (mes = 1 y dia <= 19)) Entonces
+		signo = "Capricornio"
+		c=1
+	FinSi
+	si (mes = 1 y (dia >= 20 y dia <=31) o (mes = 2 y dia <= 18)) Entonces
+		signo = "Acuario"
+		c=1
+	FinSi
+	si (mes = 2 y (dia >= 9 y  dia <= 29) o (mes = 3 y dia <= 20)) Entonces
+		signo = "Piscis"
+		c=1	
+	FinSi
+	si (mes = 3 y (dia >= 21 y dia <=31 ) o (mes = 4 y dia <= 19)) Entonces
+		signo = "Aries"
+		c=1
+	FinSi
+	si (mes = 4 y (dia >= 20 y dia <= 30) o  (mes = 5 y dia <= 20)) Entonces
+		signo = "Tauro"
+		c=1
+	FinSi
+	si (mes = 5 y (dia >= 21 y dia <=31 ) o (mes = 6 y dia <= 20)) Entonces
+		signo = "Géminis"
+		c =1
+	FinSi
+	si (mes = 6 y (dia >= 21 y dia <=30 ) o (mes = 7 y dia <= 22)) Entonces
+		signo = "Cáncer"
+		c=1
+	FinSi
+	si (mes = 7 y (dia >= 23 y dia <=31 ) o (mes = 8 y dia <= 22)) Entonces
+		signo = "Leo"
+		c=1
+	FinSi
+	si (mes = 8 y (dia >= 23 y dia <=31 ) o (mes = 9 y dia <= 22)) Entonces
+		signo = "Virgo"
+		c=1
+	FinSi
+	si (mes = 9 y (dia >= 23 y dia <=30 ) o (mes = 10 y dia <= 22)) Entonces
+		signo = "Libra"
+		c=1
+	FinSi
+	si (mes = 10 y (dia >= 23 y dia <=31 ) o (mes = 11 y dia <= 21)) Entonces
+		signo = "Escorpio"
+		c=1
+	FinSi
+	si (mes = 11 y (dia >= 22 y dia <=30 ) o (mes = 12 y dia <= 21)) Entonces
+		signo = "Sagitario"
+		c =1
+	FinSi
+	si c = 1 Entonces
+		Escribir "Tu signo del zodiaco es: ", signo
+	sino
+		Escribir "El signo del zodiaco no exite"
+		FinSi
+FinFuncion
+
+//Día del mes con respecto a la segunda quincena:
+//Solicita al usuario que ingrese un número de día del mes (por ejemplo, del 1 al 31) 
+//y verifica si ese día pertenece a la primera quincena (días 1-15) o a la segunda quincena (días 16-31).
+//bosquejo:
+//ent: definimos numero=0?(leer), n=0(resultado) como enteros
+//definimos quincena como caracter 
+// proceso:
+//si numero >=1 y numero <=15: quincena = "Pertenece a la primera quincena"; n=1
+//si numero >=16 y numero <=31:	quincena = "Pertenece a la segunda quincena"; n=1
+//salida: n = 1 
+//	Escribir quincena 
+//SiNo
+//	escribir "No pertence a ninguna quincena"
+//FinSi
+Funcion ejercicio23
+	Definir numero, n Como Entero
+	definir  quincena Como Caracter
+	Escribir "Ingrese un número de dia del mes";
+	Leer numero
+	n<-0
+	si numero >=1 y numero <=15 Entonces
+		quincena = "Pertenece a la primera quincena";
+		n=1
+	FinSi
+	si numero >=16 y numero <=31 entonces 
+		quincena = "Pertenece a la segunda quincena";
+		n=1
+	FinSi
+	si n = 1 Entonces
+		Escribir quincena 
+	SiNo
+		escribir "No pertence a ninguna quincena"
+	FinSi
+FinFuncion
+
+
+//Día de la semana: Pide al usuario que ingrese un número del 1 al 7, 
+//donde 1 representa el domingo, 2 el lunes, 3 el martes, y así sucesivamente. 
+//Luego, utiliza una estructura switch para mostrar el nombre del día de la semana correspondiente al número ingresado.
+//bosquejo:
+//ent: num=0?(leer) 
+//definimos a dia=0? (resultado) como caracter
+//pro: Si num>=1 Y num<=7:
+//si num =1: dia = "Domingo"
+//si num = 2: dia = "Lunes"
+//si num = 3: dia = "Martes"
+//si num = 4: dia = "Miercoles"
+//si num = 5: dia = "Jueves"
+//si num = 6: dia = "Viernes"
+//si num = 7: dia = "Sabado"
+//sali:Escribir "Al numero ", num, " le corresponde el dia ", dia;
+//SiNo
+//	Escribir "Ingrese un numero entre 1 y 7"
+Funcion ejercicio24
+	Definir num Como Entero
+	Definir dia Como Cadena
+	Escribir 'Ingrese un numero'
+	Leer num
+	Si num>=1 Y num<=7 Entonces
+		si num =1 Entonces
+			dia = "Domingo"
+		FinSi
+		si num = 2 Entonces
+			dia = "Lunes"
+		FinSi
+		si num = 3 Entonces
+			dia = "Martes"
+		FinSi
+		si num = 4 Entonces
+			dia = "Miercoles"
+		FinSi
+		si num = 5 Entonces
+			dia = "Jueves"
+		FinSi
+		si num = 6 Entonces
+			dia = "Viernes"
+		FinSi
+		si num = 7 Entonces
+			dia = "Sabado"
+		FinSi
+		Escribir "Al numero ", num, " le corresponde el dia ", dia;
+	SiNo
+		Escribir "Ingrese un numero entre 1 y 7"
+	FinSi
+FinFuncion
+
+
+//Frases iguales: Escribir un programa que ingrese dos frases e indique si son iguales
+//ent: definimos frase1=0?(leer), frase2=0(leer)
+// pro: si frase1 = frase2 Entonces
+//Escribir "Las Frases son iguales"
+//SiNo
+//	Escribir "Las Frases no son Iguales"
+//FinSi
+funcion ejercicio25
+	Definir frase1, frase2 Como Caracter
+	Escribir "Ingrese la Primera palabra"
+	Leer frase1
+	Escribir "Ingrese la segunda palabra"
+	Leer frase2
+	si frase1 = frase2 Entonces
+		Escribir "Las Frases son iguales"
+	SiNo
+		Escribir "Las Frases no son Iguales"
+	FinSi
+FinFuncion
+
+//Crea un programa que permita a un usuario ingresar el precio de un artículo 
+//y un porcentaje de descuento. El programa debe calcular y mostrar el precio final después del descuento.
+//ent: precio=0(leer), descuento=0?(leer), resu=0?(reultado?)
+//proceso: resu<-precio*descuento/100;
+//salida: precio, descuento, resu;
+
+Funcion ejercicio26
+	Definir precio, descuento, resu Como Real
+	Escribir "Ingrese el precio del producto"
+	Leer precio
+	Escribir "Ingrese porcentaje de descuento"
+	leer descuento;
+	resu<-precio*descuento/100;
+	Escribir "El precio del Producto es de ", precio, " con un descuento de " descuento, "% el precio final es ", resu;
+FinFuncion
+
+
+//Calculadora de factura con impuestos: Solicita al usuario que ingrese el total de una factura 
+//y el porcentaje de impuestos aplicado. 
+//Luego, calcula y muestra el monto total a pagar, incluyendo los impuestos.
+//ent: precio=0(leer), iva=12%, resultado=(resulto)
+//pro: iva<- precio*.12
+//resultado<- precio+iva
+//salida: Escribir "el monto total apagar es de ", resultado;
+funcion ejercicio27
+	Definir precio, iva, resultado Como Real
+	escribir "Ingrese el precio total"
+	Leer precio
+	iva<- precio*.12
+	resultado<- precio+iva
+	Escribir "El monto total a pagar es de ", resultado;
+	
+FinFuncion
+
+
+//Calculadora de sueldo con aumento: 
+//Pide al usuario que ingrese su salario actual y el porcentaje de aumento que recibirá. 
+//Calcula y muestra el nuevo salario después del aumento.
+//ent: definimos salario=0(leer),aumento=20% total=0?(mostrar)
+//proc: aumento<-salario*.20
+//total<-salario+aumento
+//sali: salario" con un aumento del 20% su sueldo", total;
+Funcion ejercicio28
+	Definir salario, aumento, total Como Real
+	Escribir "Ingrese el salario actual"
+	leer salario
+	Escribir "Usted tendra un aumento de 20% en el sueldo"
+	aumento<-salario*.20
+	total<-salario+aumento
+	Escribir "Su salario era de ", salario, " con un aumento del 20% su sueldo actual es ", total;
+FinFuncion
+
+
+//Calculadora de compra con múltiples artículos: 
+//Permite al usuario ingresar el precio y la cantidad de varios artículos que está comprando. 
+//Calcula el total de la compra y aplica un descuento del 10% si el total es mayor a cierta cantidad (por ejemplo, $100).
+//ent: definimos precio=0?(leer), cantidad=0?(leer), como real
+//pro: total<- precio*cantidad
+//si total>=100:descuento = total*.10:"El descuento aplicado es ", descuento; 
+//SiNo:"No aplica descuento" 
+//salida:total; total-descuento;
+Funcion ejercicio29
+	Definir precio, cantidad, total, descuento Como Real
+	Escribir "Ingrese el precio"
+	Leer precio;
+	Escribir "Ingrese la cantidad de articulos"
+	Leer cantidad;
+	total<- precio*cantidad
+	si total>=100 Entonces
+		descuento = total*.10 
+		Escribir "El descuento aplicado es ", descuento; 
+	SiNo
+		Escribir "No aplica descuento" 
+	FinSi
+	Escribir "El subtotal a paga es " total;
+	Escribir "El total a pagar es de " total-descuento;
+FinFuncion
+//Calculadora de impuestos sobre el salario:
+//Solicita al usuario que ingrese su salario anual 
+//y calcula el impuesto sobre la renta según las siguientes tasas:
+//Hasta $10,000: 5%
+//De $10,001 a $20,000: 10%
+//Más de $20,000: 15%
+//entra: definir salario=0?(Leer), impuesto como real
+// pro: si salario<=10000; impuesto = salario*.05
+//si salario >=10001 y salario<=20000: impuesto = salario*.10
+//si salario>=20000: impuesto =salario*.15
+//salida: mostrar impuesto
+Funcion ejercicio30_31_32
+	Definir salario, impuesto Como real
+	Escribir "Ingrese su salario anual"
+	Leer salario
+	si salario<=10000 Entonces
+		impuesto = salario*.05
+	FinSi
+	si salario >=10001 y salario<=20000 Entonces
+		impuesto = salario*.10
+	FinSi
+	si salario>=20000 Entonces
+		impuesto =salario*.15
+	FinSi
+	escribir "El impuesto a la renta es de " impuesto
+FinFuncion
+
+
+//Descuento por antigüedad en la empresa: 
+//pregunta al usuario cuántos años ha estado trabajando en una empresa y calcula su bono de antigüedad.
+//Si ha trabajado más de 5 años, otorga un bono del 5% sobre su salario.
+//entrada: definiremos años=0?(Leer) como entero
+//si años>=5: Aplica a un bono de 5% de descuento
+//SiNo
+//Escribir "No aplica para descuento"
+//salida: Mostraremos mensaje si aplica o no al descuento
+funcion ejercicio33
+	Definir años Como Entero
+	Escribir "¿Cuantos años ha estado trabajando?"
+	leer años
+	si años>=5 Entonces
+		Escribir "Aplica a un bono de 5% de descuento"
+	SiNo
+		Escribir "No aplica para descuento"
+	FinSi
+FinFuncion
+
+
+//Calculadora de envío con tarifas diferentes:
+//Crea un programa que permita al usuario ingresar la distancia de envío y calcule el costo del envío. 
+//Si la distancia es inferior a 50 km, el costo es de $10. 
+//Si la distancia es de 50 km o más, el costo es de $20.	
+// entrada:distanica=0?(leer), costo=0(leido)
+//proceso: 	si distancia<50: costo = 10
+//si distancia>=50: costo = 20
+//salida: mostrar el costo
+funcion ejercicio34
+	definir distancia, costo Como entero 
+	Escribir "Ingrese la distancia en Km"
+	leer distancia 
+	si distancia<50 Entonces
+		costo = 10
+	FinSi
+	si distancia>=50 Entonces
+		costo = 20
+	FinSi
+	escribir "El costo del envio es ", "$" costo
+FinFuncion
+
+
+
+//Calculadora de descuento por lealtad del cliente: 
+//Pide al usuario que ingrese el total de sus compras mensuales durante un año. Si el total es superior a $500, 
+//aplica un descuento del 10% en la próxima compra.
+//entra: total=0?(leer) 
+//proce: si total >=500: Aplica a un desuento del 10%: No aplica a descuento"
+// salida: mostrar el mensaje si o no se e ahce descuento 
+Funcion ejercicio35 
+	Definir total  Como Real
+	Escribir 	"Ingrese el total de de compras durante un año"
+	Leer total
+	si total >=500 Entonces
+		Escribir "Aplica a un desuento del 10%"
+	SiNo
+		Escribir "No aplica a descuento"
+	FinSi
+FinFuncion
+
+
+//Calculadora de descuento por volumen de compra: 
+//Permite al usuario ingresar la cantidad de unidades de un producto que va a comprar y el precio unitario. 
+//Aplica descuentos por volumen de compra según las siguientes reglas:
+//10-50 unidades: 5% de descuento
+//51-100 unidades: 10% de descuento
+//Más de 100 unidades: 15% de descuento
+// entrada: cantidad=0?(leer), precio=0?(leer), n=0 total=0?(resultado)
+// definimos a c como real
+//proce: total<- cantidad* precio
+//si cantidad >=10 y cantidad <=50: c= total*.05, n=1: "El descuento aplicado es de 5%"
+//si cantidad >=51 y cantidad <100: c=total*.10, n=1: "el descuento aplicado es del 10%"
+//si cantidad >=100: c=total *.15, n=1: "El descuento aplicado es del 15%"
+//si n=1: "Esta llevando una cantidad de ", cantidad, " y descuento aplicado es de ", c
+//Escribir "Esta llevando una cantidad de ", cantidad, " y no aplica descuento"
+//salida: escribir "El total a pagar es ", total-c
+
+Funcion ejercicio36_37_38_39
+	definir cantidad, precio, n, total  Como real
+	definir c Como Real
+	Escribir "Ingrese la cantidad del producto"
+	leer cantidad
+	Escribir "Ingrese el precio del producto"
+	leer precio
+	total<- cantidad* precio
+	Escribir "El subtotal a pagar es ", total
+	n<-0
+	c<-0
+	si cantidad >=10 y cantidad <=50 Entonces
+		c= total*.05
+		n=1
+		Escribir "El descuento aplicado es de 5%"
+	FinSi
+	si cantidad >=51 y cantidad <100 Entonces
+		c=total*.10
+		n=1
+		Escribir "el descuento aplicado es del 10%"
+	FinSi
+	si cantidad >=100 Entonces
+		c=total *.15
+		n=1
+		Escribir "El descuento aplicado es del 15%"
+	FinSi
+	si n=1 Entonces
+		Escribir "Esta llevando una cantidad de ", cantidad, " y descuento aplicado es de ", c
+	sino 
+		Escribir "Esta llevando una cantidad de ", cantidad, " y no aplica descuento"
+	FinSi
+	escribir "El total a pagar es ", total-c
+FinFuncion
+
+
+//Calculadora de costo de servicio: 
+//Pregunta al usuario cuántas horas de servicio necesita y calcula el costo total. 
+//Si las horas son más de 10, aplica un descuento del 20%.
+//entrada: definimor horas=0?(leer), costo=0?(leer), total=0?(resultado) como enteros
+//proceso: total<- costo*horas 
+//si horas>=10: descuento =total*.20:"Aplica un descuento de 20%": "No aplica descuento"
+
+//salida: Escribir "El total a pagar " total-descuento
+Funcion ejercicio40
+	definir horas, costo, total Como Entero
+	Definir descuento Como Real
+	Escribir "Ingrese el costo del servicio"
+	leer costo
+	Escribir "Ingrese las horas de servicio"
+	leer horas
+	total<- costo*horas 
+	
+	Escribir "El total de costo es " total
+	si horas>=10 Entonces
+		descuento =total*.20
+		Escribir "Aplica un descuento de 20%" 
+	SiNo
+		Escribir "No aplica descuento"
+	FinSi
+	Escribir "El total a pagar " total-descuento
+FinFuncion
+
+Algoritmo sin_titulo
+	//ejercicio17()
+	//ejercicio18()
+	//ejercicio19()
+	//ejercicio20()
+	//ejercicio21()
+	//ejercicio22()
+	//ejercicio23()
+	//ejercicio24()
+	//ejercicio25()
+	//ejercicio26()
+	//ejercicio27()
+	//ejercicio28()
+	//ejercicio29()
+	//ejercicio30_31_32
+	//ejercicio33()
+	//ejercicio34()
+	//ejercicio35()
+	//ejercicio36_37_38_39()
+	//ejercicio40()
+	
+FinAlgoritmo

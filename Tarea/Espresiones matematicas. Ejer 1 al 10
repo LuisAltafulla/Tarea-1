@@ -1,0 +1,169 @@
+// orden de procedencia:  (), ^ *, / mod div, + -
+// del mismo nivel se resuelve de izquierda a derecha
+// ejererccio 1: Dado a=3 y b=7, encuentra el valor de:
+// y = 2 * a + b - 3 mod 3
+// y = 2 * 3 + 7 - 3  mod 3
+// y = 6 + 7 - 3 mod 3
+// y = 6 + 7  - 0
+// y =  13
+Funcion Ejercicio1
+	Definir a, b, resultado Como entero
+	a<-3;
+	b<-7;
+	resultado<-2*a+b-a mod 3
+	Escribir "El resultado es: " resultado
+FinFuncion
+
+
+//ejercio2: Si a=10 y b=4, calcula el valor de 
+// z = a * b + 3 mod a + b.
+// z = 10 * 4 + 3 mod 10 + 4
+// z = 40 + 3 mod 10 +4
+// z = 40 + 3 + 4
+// z = 47
+Funcion Ejercicio2
+	Definir a, b, resultado Como entero
+	a<-10;
+	b<-4;
+	resultado<-a*b+3 mod a+b
+	Escribir "El resultado es: " resultado
+FinFuncion
+
+
+//ejercicio3: Con a=6 y b=2, determina el valor de 
+// w = a - b + 2 * a mod b.
+// w = 6 - 2 + 2 * 6 mod 2
+// w = 6 - 2 + 12 mod 2
+// w = 6 - 2 + 0
+// w = 4
+Funcion Ejercicio3
+	Definir a, b, resultado Como entero
+	a<-6;
+	b<-2;
+	resultado<-a-b+2*a mod b
+	Escribir "El resultado es: " resultado
+FinFuncion
+
+//ejercicio4: Para a=8 y b=5, encuentra el valor de 
+// v = 2 * b + a div 2 + 4 * b mod a.
+// v = 2 * 5 + 8 div 2 + 4 * 5 mod 8
+// v = 10 + 8 div 2 + 20 mod 8 
+// v = 10 + 4 + 2
+// v = 16
+Funcion Ejercicio4
+	Definir a, b, resultado Como entero
+	a<-8;
+	b<-5;
+	resultado<-2*b+a / 2+4*b mod a;
+	Escribir "El resultado es: " resultado;
+FinFuncion
+
+
+//ejercicio5: Si a=12 y b=9, calcula el valor de 
+//u = b - a + 3 * a mod b.
+//u = 9 - 12 + 3 * 12 mod 9 
+//u = 9 - 12 + 36 mod 9
+//u = 9 - 12 + 0 
+//u = -3
+Funcion Ejercicio5
+	Definir a, b, resultado Como Real
+	a<-12;
+	b<-9;
+	resultado<-b-a+3*a mod b
+	Escribir "El resultado es: " resultado;
+FinFuncion
+
+//ejercicio6: (5 + 3 * 2) + 9 > 3 * 5 * 14 % 3?
+//ent: definimos variables:
+//v1= (5 + 3 * 2) + 9
+//v2= 3 * 5 14 % 3
+//escribir v1 ">" v2
+//proceso: si v1>v2 Entonces
+//           escribir "Verdadero"
+//          SiNo
+//			 escribir "Falso"
+//          fin SiNo
+//salida: 
+Funcion  Ejercicio6
+	Definir v1, v2, resultado Como entero
+	v1<-(5+3*2)+9
+	v2<-3*5*14%3
+	Escribir v1, ">", v2;
+	
+	Si v1>v2 Entonces
+		Escribir "Verdadero"
+	SiNo
+		Escribir "Falso"
+	Fin Si
+FinFuncion
+
+
+//ejercicio7: resolver el 
+// res =2 *(4 - 10 + 8)/2* 36 *(1/2)
+// res =2 * (2)/2 *36 * 0.5
+// res= 2 * 1 * 18
+// res= 36
+Funcion Ejercicio7 
+	Definir v1, v2, resultado Como real
+	v1<-2*(4-10+8)/2
+	v2<-36*(1/2)
+	resultado<-v1*v2
+	Escribir "El resultado es ", resultado;
+FinFuncion
+
+
+//ejercicio8: resolver 
+//res: 260 / 12 + 54 % 3 - 85 % 7
+//res: 21.666 + 0 - 1
+//res: 20.66666667
+Funcion Ejercico8
+	Definir a, b, c, resultado Como real
+	a<-260/12;
+	b<-54%3;
+	c<-85%7
+    resultado<-a+b-c;
+	Escribir "El Resultado es ", resultado;
+FinFuncion
+
+
+//(48 < 2 * 3) | | (2 * 7 < 12)
+//entrada: v1<-48; v2<-2*3; v3<-2*7; v4<-12
+//proceso: 48 < 2 * 3  o (2 * 7 < 12)
+// (48 < 6)f  o  (14 < 12)f
+//salida: mostrar respuesta 
+Funcion ejercicio9
+	definir v1, v2, v3, v4 como entero
+	v1<-48
+	v2<-2*3
+	v3<-2*7
+	v4<-12
+	si (v1<v2) O (v3<v4) Entonces
+		Escribir "Verdadero"
+	SiNo
+		Escribir "Falso"
+	FinSi
+FinFuncion
+
+//((8 > 2) | | (932 < 23) ) && 4 == 2?
+//entrada: a=(8 > 2) ,b<- (932<23),	c<- 4 ==2
+//proceso: se realiza la operacion
+//salida: a 
+Funcion ejercicio10
+Definir a Como Logico
+a<- ((8 > 2) o (932<23))  y 4 ==2
+Escribir a
+
+FinFuncion
+
+Algoritmo expresionesMatemáticas
+	//Ejercicio1()
+	//Ejercicio2()
+	//Ejercicio3()
+	//Ejercicio4()
+	//Ejercicio5()
+	//Ejercicio6()
+	//Ejercicio7()
+	//Ejercicio8()
+	//ejercicio9()
+	ejercicio10
+FinAlgoritmo
